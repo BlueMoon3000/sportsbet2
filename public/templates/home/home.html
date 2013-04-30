@@ -1,0 +1,22 @@
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <a class="brand" href="/">SportsBet With Friends</a>
+        <ul class="nav pull-right">
+            <li><img src="https://graph.facebook.com/<%= user.fb_user_id%>/picture/" /> <%= user.first_name %></li>
+        </ul>
+    </div>
+</div>
+<p>Enter a game code in the box below or start a new game!</p>
+<br />
+<br />
+
+<label>Game Code:</label>
+<div class="input-append">
+<input class="game-code" type="text" placeholder="Ex: 1232" /><button class="btn game-code-submit">Submit</button>
+</div>
+<br />
+<br />
+<button class="btn create-game">Create New Game</button>
+<br />
+<div class="match-container">
+</div>

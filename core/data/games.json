@@ -1,0 +1,57 @@
+[
+  {
+    "model": "core.game",
+    "pk": null,
+    "fields": {
+      "league": "nba",
+      "sports_data_id": null,
+      "home": 30,
+      "away": 29,
+      "gamestatus": 1
+    }
+  },
+  {
+    "model": "core.game",
+    "pk": null,
+    "fields": {
+      "league": "nba",
+      "sports_data_id": null,
+      "home": 28,
+      "away": 27,
+      "gamestatus": 1
+    }
+  },
+  {
+    "model": "core.game",
+    "pk": null,
+    "fields": {
+      "league": "nba",
+      "sports_data_id": null,
+      "home": 10,
+      "away": 9,
+      "gamestatus": 1
+    }
+  },
+  {
+    "model": "core.game",
+    "pk": null,
+    "fields": {
+      "league": "nba",
+      "sports_data_id": null,
+      "home": 12,
+      "away": 11,
+      "gamestatus": 1
+    }
+  },
+  {
+    "model": "core.game",
+    "pk": null,
+    "fields": {
+      "league": "nba",
+      "sports_data_id": null,
+      "home": 15,
+      "away": 19,
+      "gamestatus": 1
+    }
+  }
+]

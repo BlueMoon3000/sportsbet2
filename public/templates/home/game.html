@@ -1,0 +1,18 @@
+<p>
+    <% if (!picks || picks.length == 0) { %>
+    <a href='#' class='btn team-select away'><%= game.away.city %> <%= game.away.name %></a> vs <a href='#' class='btn team-select home'><%= game.home.city %> <%= game.home.name %></a>
+    <% } else { %>
+        <% _.each(picks, function(pick) { %>
+            <% if (pick.team_id == game.away.id) { %>
+                <span class='team-selected away'><%= game.away.city %> <%= game.away.name %></span> vs
+            <% } else { %>
+                <a href='#' class='btn team-select away'><%= game.away.city %> <%= game.away.name %></a> vs 
+            <% } %>
+            <% if (pick.team_id == game.home.id) { %>
+                <span class='team-selected home'><%= game.home.city %> <%= game.home.name %></span>
+            <% } else { %>
+                <a href='#' class='btn team-select home'><%= game.home.city %> <%= game.home.name %></a> 
+            <% } %>
+        <% }); %>
+    <% }; %>
+</p>

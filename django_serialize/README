@@ -1,0 +1,10 @@
+Django-Serialize
+================
+
+### Introduction
+
+Django-Serialize extends the default Django serialization framework, inspired by wadofstuff (https://code.google.com/p/wadofstuff/wiki/DjangoFullSerializers). It is designed to give the developer more control over how models are serialized and make it possible to change serialized objects based on context.
+
+Django-Serialize focuses on extending Django Models to return a serializable dictionary object. The output of this object can be customized on a per model basis.
+
+To begin, simple add the SerializeMixin to one of your models:
