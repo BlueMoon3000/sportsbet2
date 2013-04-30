@@ -15,9 +15,9 @@
 
       Games.prototype.model = Models.Game;
 
-      Games.prototype.url = '/api/v1/game/';
+      Games.prototype.url = 'api/v1/game/';
 
-      Games.prototype.urlRoot = 'http://local.host:8000' + Games.url;
+      Games.prototype.urlRoot = App.Config.ROOT_URL + Games.url;
 
       return Games;
 

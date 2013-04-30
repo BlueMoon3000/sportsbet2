@@ -1,6 +1,16 @@
 # Django settings for core project.
 import os
 
+DEVELOPMENT = False
+STAGING = False
+if 'DEV_ENV' in os.environ:
+    if os.environ['DEV_ENV'] == 'heroku':
+        STAGING = True
+        ENVIRONMENT = 'staging'
+else:
+    DEVELOPMENT = True
+    ENVIRONMENT = 'dev'
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -10,16 +20,22 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'todo',                      
-        'USER': 'admin',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': 5432
+if DEVELOPMENT:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'todo',                      
+            'USER': 'admin',
+            'PASSWORD': 'password',
+            'HOST': 'localhost',
+            'PORT': 5432
+        }
     }
-}
+elif STAGING:
+    import dj_database_url
+    # This automatically retrieves the Heroku PostgreSQL URL!?
+    DATABASES['default'] =  dj_database_url.config()
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Django-serialize settings
 SERIALIZE_FLATTEN_MODELS = True

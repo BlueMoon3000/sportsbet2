@@ -1,8 +1,16 @@
 define [], () -> 
   # This serves as a state object for the entire app.
-  App = window.App or 
-    Config: # Global Config
+  if window.ENVIRON == 'dev'
+    CONF = 
       FB_APP_ID: '494835607253773'
+      ROOT_URL: 'http://local.host:8000/'
+  else if window.ENVIRON == 'staging'
+    CONF = 
+      FB_APP_ID: '138543369667363'
+      ROOT_URL: 'http://sportsbet2.herokuapp.com/'
+
+  App = window.App or 
+    Config: CONF
     Collections: {}
     Models: {}
     Views: {}

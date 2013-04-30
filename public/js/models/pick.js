@@ -17,7 +17,7 @@
 
       modelClass = Pick.constructor.name.toLowerCase();
 
-      Pick.prototype.urlRoot = 'http://local.host:8000/api/v1/pick/';
+      Pick.prototype.urlRoot = App.Config.ROOT_URL + 'api/v1/pick/';
 
       Pick.prototype.defaults = function() {
         return _.extend(this.constructor.__super__.defaults(this));

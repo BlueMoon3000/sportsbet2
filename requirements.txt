@@ -1,5 +1,6 @@
 Django==1.5.1
 South==0.7.6
+dj-database-url==0.2.1
 ipython==0.13.1
 psycopg2==2.4.6
 readline==6.2.4.1

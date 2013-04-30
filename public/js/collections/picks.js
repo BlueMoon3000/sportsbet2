@@ -15,9 +15,9 @@
 
       Picks.prototype.model = Models.Pick;
 
-      Picks.prototype.url = '/api/v1/pick/';
+      Picks.prototype.url = 'api/v1/pick/';
 
-      Picks.prototype.urlRoot = 'http://local.host:8000' + Picks.url;
+      Picks.prototype.urlRoot = App.Config.ROOT_URL + Picks.url;
 
       return Picks;
 

@@ -17,7 +17,7 @@
 
       modelClass = Match.constructor.name.toLowerCase();
 
-      Match.prototype.urlRoot = 'http://local.host:8000/api/v1/match/';
+      Match.prototype.urlRoot = App.Config.ROOT_URL + 'api/v1/match/';
 
       Match.prototype.defaults = function() {
         return _.extend(this.constructor.__super__.defaults(this));

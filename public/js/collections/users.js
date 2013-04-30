@@ -15,9 +15,9 @@
 
       Users.prototype.model = Models.User;
 
-      Users.prototype.url = '/api/v1/appuser/';
+      Users.prototype.url = 'api/v1/appuser/';
 
-      Users.prototype.urlRoot = 'http://local.host:8000' + Users.url;
+      Users.prototype.urlRoot = App.Config.ROOT_URL + Users.url;
 
       return Users;
 

@@ -17,7 +17,7 @@
 
       modelClass = AppUser.constructor.name.toLowerCase();
 
-      AppUser.prototype.urlRoot = 'http://local.host:8000/api/v1/appuser/';
+      AppUser.prototype.urlRoot = App.Config.ROOT_URL + 'api/v1/appuser/';
 
       AppUser.prototype.defaults = function() {
         return _.extend(this.constructor.__super__.defaults(this), {

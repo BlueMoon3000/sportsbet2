@@ -1,7 +1,7 @@
 define ["app", "../models/base", "jquery", "underscore", "backbone"], (App, BaseModel, $, _, Backbone) ->
   App.Models.User = class AppUser extends BaseModel
     modelClass = this.constructor.name.toLowerCase()
-    urlRoot: 'http://local.host:8000/api/v1/appuser/'
+    urlRoot: App.Config.ROOT_URL + 'api/v1/appuser/'
 
     defaults: -> _.extend this.constructor.__super__.defaults(this),
       id: 'findOne' # BIGGEST HACK IN THE WORLD

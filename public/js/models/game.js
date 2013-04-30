@@ -17,7 +17,7 @@
 
       modelClass = Game.constructor.name.toLowerCase();
 
-      Game.prototype.urlRoot = 'http://local.host:8000/api/v1/game/';
+      Game.prototype.urlRoot = App.Config.ROOT_URL + 'api/v1/game/';
 
       Game.prototype.defaults = function() {
         return _.extend(this.constructor.__super__.defaults(this));
