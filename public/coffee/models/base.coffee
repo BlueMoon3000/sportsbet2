@@ -6,6 +6,8 @@ define ["app", "jquery", "backbone"], (App, $, Backbone) ->
 
     parse: (response) ->
         # Not crazy about this... lets update the backend to make it nicer...
+        if response.error
+            return null
         if response.response
             return response.response
         else

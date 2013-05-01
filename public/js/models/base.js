@@ -23,6 +23,9 @@
       };
 
       BaseModel.prototype.parse = function(response) {
+        if (response.error) {
+          return null;
+        }
         if (response.response) {
           return response.response;
         } else {
